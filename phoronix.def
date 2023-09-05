@@ -1,0 +1,11 @@
+Bootstrap: docker
+From: torxcz/phoronix-test-suite:latest
+
+%files 
+    phoronix-test-suite.xml /etc/phoronix-test-suite.xml
+    
+%post
+    /phoronix-test-suite/phoronix-test-suite batch_install pts/fftw pts/ffte
+
+%runscript
+    /phoronix-test-suite/phoronix-test-suite batch_run pts/fftw pts/ffte
