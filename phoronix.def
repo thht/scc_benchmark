@@ -5,7 +5,7 @@ From: torxcz/phoronix-test-suite:latest
     phoronix-test-suite.xml /etc/phoronix-test-suite.xml
 
 %environment
-    PTS_USER_PATH_OVERRIDE=/tmp/phoronix_user_path
+    export PTS_USER_PATH_OVERRIDE=/tmp/phoronix_user_path
     
 %post
     chmod a+w /etc/phoronix-test-suite.xml
