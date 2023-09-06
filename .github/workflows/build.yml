@@ -22,5 +22,5 @@ jobs:
           apt-get install -y apptainer
           echo ${{ secrets.GITHUB_TOKEN }} | apptainer remote login -u ${{ secrets.GHCR_USERNAME }} --password-stdin oras://ghcr.io
           mkdir images
-          apptainer build --build-arg tests="pts/ffte" images/phoronix.sif phoronix.def
+          apptainer build --build-arg tests="pts/hpc pts/scientific-computing" images/phoronix.sif phoronix.def
           apptainer push images/phoronix.sif oras://ghcr.io/${GITHUB_REPOSITORY}/benchmarks:latest
