@@ -1,9 +1,6 @@
 Bootstrap: docker
 From: torxcz/phoronix-test-suite:latest
 
-%arguments
-    tests="pts/ftte"
-
 %files 
     phoronix-test-suite.xml /etc/phoronix-test-suite.xml
     
