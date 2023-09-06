@@ -5,6 +5,7 @@ From: torxcz/phoronix-test-suite:latest
     phoronix-test-suite.xml /etc/phoronix-test-suite.xml
     
 %post
+    chmod a+w /etc/phoronix-test-suite.xml
     /phoronix-test-suite/phoronix-test-suite batch_install pts/fftw pts/ffte
 
 %runscript
