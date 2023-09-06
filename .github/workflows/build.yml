@@ -1,13 +1,13 @@
 on:
   push:
     branches:
-      - main
+      - use-ubuntu
 
 jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: kaczmarj/apptainer
+      image: ubuntu-latest
       options: --privileged
     steps:
       - name: Check out code for the container builds
@@ -15,6 +15,11 @@ jobs:
 
       - name: build
         run: | 
+          apt-get update
+          apt-get install -y software-properties-common
+          add-apt-repository -y ppa:apptainer/ppa
+          apt-get update
+          apt-get install -y apptainer
           echo ${{ secrets.GITHUB_TOKEN }} | apptainer remote login -u ${{ secrets.GHCR_USERNAME }} --password-stdin oras://ghcr.io
           mkdir images
           apptainer build --build-arg tests="pts/ffte" images/phoronix.sif phoronix.def
