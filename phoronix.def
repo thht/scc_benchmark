@@ -7,9 +7,11 @@ From: torxcz/phoronix-test-suite:latest
 %post
     chmod a+w /etc/phoronix-test-suite.xml
     chmod -R a+w /phoronix-test-suite
+    mkdir /phoronix-test-suite-files
     /phoronix-test-suite/phoronix-test-suite batch_install pts/fftw pts/ffte
     apt-get update
     apt-get -y install vim
+    chmod -R a+wr /phoronix-test-suite-files
 
 %runscript
     /phoronix-test-suite/phoronix-test-suite batch_run pts/fftw pts/ffte

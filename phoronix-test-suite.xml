@@ -23,15 +23,15 @@
       <SearchMediaForCache>TRUE</SearchMediaForCache>
       <SymLinkFilesFromCache>FALSE</SymLinkFilesFromCache>
       <PromptForDownloadMirror>FALSE</PromptForDownloadMirror>
-      <EnvironmentDirectory>~/.phoronix-test-suite/installed-tests/</EnvironmentDirectory>
-      <CacheDirectory>~/.phoronix-test-suite/download-cache/</CacheDirectory>
+      <EnvironmentDirectory>/phoronix-test-suite-files/installed-tests/</EnvironmentDirectory>
+      <CacheDirectory>/phoronix-test-suite-files/download-cache/</CacheDirectory>
     </Installation>
     <Testing>
       <SaveSystemLogs>TRUE</SaveSystemLogs>
       <SaveInstallationLogs>TRUE</SaveInstallationLogs>
       <SaveTestLogs>TRUE</SaveTestLogs>
       <RemoveTestInstallOnCompletion>FALSE</RemoveTestInstallOnCompletion>
-      <ResultsDirectory>~/.phoronix-test-suite/test-results/</ResultsDirectory>
+      <ResultsDirectory>/phoronix-test-suite-files/test-results/</ResultsDirectory>
       <AlwaysUploadResultsToOpenBenchmarking>FALSE</AlwaysUploadResultsToOpenBenchmarking>
       <AutoSortRunQueue>TRUE</AutoSortRunQueue>
       <ShowPostRunStatistics>TRUE</ShowPostRunStatistics>
@@ -76,7 +76,7 @@
       <WebSocketPort>RANDOM</WebSocketPort>
       <AdvertiseServiceZeroConf>TRUE</AdvertiseServiceZeroConf>
       <AdvertiseServiceOpenBenchmarkRelay>TRUE</AdvertiseServiceOpenBenchmarkRelay>
-      <PhoromaticStorage>~/.phoronix-test-suite/phoromatic/</PhoromaticStorage>
+      <PhoromaticStorage>/phoronix-test-suite-files/phoromatic/</PhoromaticStorage>
     </Server>
   </Options>
 </PhoronixTestSuite>
