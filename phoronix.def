@@ -1,6 +1,9 @@
 Bootstrap: docker
 From: torxcz/phoronix-test-suite:latest
 
+%arguments
+    tests="pts/ftte"
+
 %files 
     phoronix-test-suite.xml /etc/phoronix-test-suite.xml
     
@@ -8,10 +11,10 @@ From: torxcz/phoronix-test-suite:latest
     chmod a+w /etc/phoronix-test-suite.xml
     chmod -R a+w /phoronix-test-suite
     mkdir /phoronix-test-suite-files
-    /phoronix-test-suite/phoronix-test-suite batch_install pts/fftw pts/ffte
+    /phoronix-test-suite/phoronix-test-suite batch_install {{ tests }}
     apt-get update
     apt-get -y install vim
     chmod -R a+wr /phoronix-test-suite-files
 
 %runscript
-    /phoronix-test-suite/phoronix-test-suite batch_run pts/fftw pts/ffte
+    /phoronix-test-suite/phoronix-test-suite batch_run {{ tests }}
