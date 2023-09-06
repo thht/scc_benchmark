@@ -3,5 +3,5 @@
 Please run like this:
 
 ```
-singularity run --no-home --writable-tmpfs --cleanenv --bind /tmp/benchmark_results:/phoronix-test-suite-files/ oras://ghcr.io/thht/scc_benchmark/benchmarks:latest
+singularity run --no-home --writable-tmpfs --cleanenv --bind /tmp/benchmark_results:/phoronix-test-results/ oras://ghcr.io/thht/scc_benchmark/benchmarks:latest
 ```
